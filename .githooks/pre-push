@@ -1,0 +1,29 @@
+#!/bin/sh
+# Candado personal (estandar de Tupac). Frena:
+#   1) cualquier push a main o master
+#   2) cualquier push a un remoto que NO sea github.com/sanhuezatupac-boop/
+#
+# El merge a main se hace solo en un prompt dedicado, con el OK de Tupac.
+
+remote_url="$2"
+
+case "$remote_url" in
+    *github.com/sanhuezatupac-boop/* | *github.com:sanhuezatupac-boop/*)
+        : # cuenta personal correcta
+        ;;
+    *)
+        echo "CANDADO: el remoto '$remote_url' no es de sanhuezatupac-boop. Push frenado." >&2
+        exit 1
+        ;;
+esac
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+    case "$remote_ref" in
+        refs/heads/main | refs/heads/master)
+            echo "CANDADO: no se hace push a '$remote_ref'. El merge a main va con el OK de Tupac." >&2
+            exit 1
+            ;;
+    esac
+done
+
+exit 0

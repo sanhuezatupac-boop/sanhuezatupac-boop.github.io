@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finanzas personales</title>
+  <meta name="description" content="Finanzas personales: herramienta de uso personal, de un solo usuario, que arma un tablero de gastos a partir de los avisos de consumo de la tarjeta en Gmail.">
+  <style>
+    :root {
+      --fondo: #f7f7f5;
+      --texto: #1c1c1e;
+      --suave: #555;
+      --acento: #2b6cb0;
+      --tarjeta: #ffffff;
+      --borde: #e2e2df;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fondo: #1a1a1c;
+        --texto: #ececec;
+        --suave: #a8a8a8;
+        --acento: #7fb0e8;
+        --tarjeta: #242427;
+        --borde: #35353a;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-text-size-adjust: 100%;
+    }
+    .envoltorio {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 16px 56px;
+    }
+    header { margin-bottom: 8px; }
+    h1 { font-size: 1.9rem; margin: 0 0 4px; }
+    .lema { color: var(--suave); font-size: 1.05rem; margin: 0 0 28px; }
+    h2 { font-size: 1.25rem; margin: 32px 0 8px; }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 14px; padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    .tarjeta {
+      background: var(--tarjeta);
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 24px 0;
+    }
+    a { color: var(--acento); }
+    .boton {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 11px 18px;
+      background: var(--acento);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    footer {
+      margin-top: 44px;
+      padding-top: 18px;
+      border-top: 1px solid var(--borde);
+      color: var(--suave);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="envoltorio">
+    <header>
+      <h1>Finanzas personales</h1>
+      <p class="lema">Un tablero de gastos privado, para una sola persona.</p>
+    </header>
+
+    <p><strong>Finanzas personales</strong> es una herramienta de uso personal, de un
+    solo usuario, que corre en la propia computadora de quien la usa. Sirve para
+    ordenar los gastos de la tarjeta y verlos en un tablero simple.</p>
+
+    <h2>Qué hace</h2>
+    <p>Lee únicamente los avisos de consumo de la tarjeta que llegan al correo de
+    Gmail, con permiso de <strong>solo lectura</strong>, y con esa información arma
+    un tablero de gastos personal.</p>
+
+    <h2>Dónde funciona</h2>
+    <ul>
+      <li>Corre en la computadora del propio usuario; no hay servidores.</li>
+      <li>Los datos quedan solo en esa computadora.</li>
+      <li>No se comparten, no se venden y no se usan para publicidad ni para
+      entrenar modelos de inteligencia artificial.</li>
+    </ul>
+
+    <div class="tarjeta">
+      <p style="margin:0 0 6px"><strong>Privacidad</strong></p>
+      <p style="margin:0 0 12px">Cómo se accede a los datos, para qué, dónde quedan y
+      cómo revocar el acceso está detallado en la política de privacidad.</p>
+      <a class="boton" href="privacidad.html">Ver política de privacidad</a>
+    </div>
+
+    <footer>
+      <p>Proyecto personal. Contacto:
+      <a href="https://github.com/sanhuezatupac-boop">perfil de GitHub</a>.</p>
+    </footer>
+  </main>
+</body>
+</html>
